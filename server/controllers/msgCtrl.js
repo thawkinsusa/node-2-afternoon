@@ -17,12 +17,12 @@ module.exports = {
      let updateMessageId = req.param.messageId;
      let messageIndex = messages.findIndex(message => message.id == updateMessageId);
 
-     message[messageIndex] = {
+     messages[messageIndex] = {
          id: messages.id,
          text: text || messages.text,
          time: messages.time
      };
-     res.status(200).send(message)
+     res.status(200).send(messages)
         
     },
     
